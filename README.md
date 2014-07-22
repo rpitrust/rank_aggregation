@@ -1,4 +1,4 @@
-rankaggregation: Rank Aggregation Algorithms
+rank_aggregation: Rank Aggregation Algorithms
 ===============================================
 
 This repository contains a number of simple rank aggregation algorithms and iterative algorithms that take as input a ranker and improves the ranking.
