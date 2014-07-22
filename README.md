@@ -73,9 +73,14 @@ Iterative algorithms (executed in the order given):
     
 All parameters with default values must be explicitly provided when combined with other functions. 
 
-Example: python aggregate.py pg 0.85 ibf
-	Pagerank, followed by ibf
-Example: python aggregate.py in ir 5 ibf
-	Indegree followed by iterative remove, followed by ibf
+Example: 
+
+        python aggregate.py pg 0.85 ibf
+        Pagerank, followed by ibf
+
+Example: 
+
+        python aggregate.py in ir 5 ibf
+        Indegree followed by iterative remove, followed by ibf
 	
 	
