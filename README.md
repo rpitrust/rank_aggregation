@@ -20,14 +20,15 @@ Any publication resulting from the use of this work must cite the following publ
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-Usage
-----------
+Module Description
+-------------------
 
 All rankers are provided in file named rank_aggregators.py, except for pagerank method is given in a separate module.
 
 The module create_ranking.py can be used to create random test rankers.
 
 All rankers should be provided in a single input file which is:
+
     *  comma separated
     *  contain a header row
     *  first column is the object ids, assumed to be integers
@@ -51,16 +52,22 @@ Please include
 
 To call the wrapper around the rank aggregation algorithms, use the following:
 
-python aggregate.py inputfile aggregator <list of iterative algorithms>
-Aggregator list:
-	in: indegree
-	pg alpha: pagerank with given alpha (float between 0-1, default 0.85)
-	rnd k: random with k tries
+Usage 
+-------------
 
-Iterative algorithms (executed in the order given)
-	igf: iterative greedy flip
-	ibf k: iterative best flip (at most k (integer, default 1) rounds
-	ir k: iterative remove up to k (integer, default 1) rankers
+python aggregate.py inputfile aggregator <list of iterative algorithms>
+
+Aggregator list:
+
+    * in: indegree
+    * pg alpha: pagerank with given alpha (float between 0-1, default 0.85)
+    * rnd k: random with k tries
+
+Iterative algorithms (executed in the order given):
+
+    * igf: iterative greedy flip
+    * ibf k: iterative best flip (at most k (integer, default 1) rounds
+    * ir k: iterative remove up to k (integer, default 1) rankers
 
 Example: python aggregate.py pg 0.85 ibf
 	Pagerank, followed by ibf
