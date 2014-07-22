@@ -75,12 +75,12 @@ All parameters with default values must be explicitly provided when combined wit
 
 Example: 
 
-        python aggregate.py data10_10.csv pg 0.85 ibf
+        python aggregate.py test/data10_10.csv pg 0.85 ibf
         Pagerank, followed by ibf
 
 Example: 
 
-        python aggregate.py data10_10.csv in ir 5 ibf
+        python aggregate.py test/data10_10.csv in ir 5 ibf
         Indegree followed by iterative remove, followed by ibf
 	
 	
