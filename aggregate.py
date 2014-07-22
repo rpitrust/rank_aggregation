@@ -9,6 +9,7 @@
 
 import sys
 import rank_aggregators as r
+import time
 
 def print_menu():
         print "Usage: python aggregate.py inputfile aggregator <list of iterative algorithms>"
@@ -38,6 +39,7 @@ def print_error(msg):
     sys.exit()
 
 if __name__ == "__main__":
+    start = time.time()
     if len(sys.argv) <3:
         print_menu()
         sys.exit()
@@ -117,3 +119,8 @@ if __name__ == "__main__":
     print "Final score:", score
     print "Final ranker:"
     r.print_single_ranker(ranker)
+
+    end = time.time()
+    print
+    print "Took %.2f seconds" % (end-start)
+    print
