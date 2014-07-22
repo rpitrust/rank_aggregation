@@ -55,7 +55,9 @@ To call the wrapper around the rank aggregation algorithms, use the following:
 Usage 
 -------------
 
-python aggregate.py inputfile aggregator <list of iterative algorithms>
+Call the wrapper function by:
+
+    python aggregate.py inputfile aggregator <list of iterative algorithms>
 
 Aggregator list:
 
