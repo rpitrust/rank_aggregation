@@ -1,0 +1,55 @@
+
+
+$ python aggregate.py test/data20_40.csv in ir 5
+
+Indegree algorithm, score: 0.0323684210526
+Iterative best removal with k = 5 score: 0.0634586466165
+Removed rankers (in order): ranker21, ranker29, ranker1, ranker38, ranker11
+Final score: 0.0634586466165
+Final ranker:
+4 19 3 17 6 12 11 15 1 10 5 7 14 13 18 8 20 2 16 9
+
+$ python aggregate.py test/data20_40.csv in ir 5 ibf
+
+Indegree algorithm, score: 0.0323684210526
+Iterative best removal with k = 5 score: 0.0634586466165
+Removed rankers (in order): ranker21, ranker29, ranker1, ranker38, ranker11
+Iterative best flip, score: 0.0803007518797
+Final score: 0.0803007518797
+Final ranker:
+4 19 3 17 6 12 11 15 1 10 5 7 14 13 18 8 20 2 16 9
+
+$ python aggregate.py test/data20_40.csv in ibf
+
+Indegree algorithm, score: 0.0323684210526
+Iterative best flip, score: 0.118947368421
+Final score: 0.118947368421
+Final ranker:
+19 4 17 3 6 7 12 5 15 1 18 11 10 14 20 8 13 2 16 9
+
+$ python aggregate.py test/data20_40.csv pg 0.85 ibf
+
+Pagerank algorithm, alpha = 0.85 , score: 0.0297368421053
+Iterative best flip, score: 0.141578947368
+Final score: 0.141578947368
+Final ranker:
+19 17 4 3 6 12 7 5 18 1 15 11 10 14 8 20 13 2 16 9
+
+$ python aggregate.py test/data20_40.csv pg 0.85 ibf ibf
+
+Pagerank algorithm, alpha = 0.85 , score: 0.0297368421053
+Iterative best flip, score: 0.141578947368
+Iterative best flip, score: 0.141578947368
+Final score: 0.141578947368
+Final ranker:
+19 17 4 3 6 12 7 5 18 1 15 11 10 14 8 20 13 2 16 9
+
+$ python aggregate.py test/data20_40.csv pg 0.85 ir 2 ibf
+
+Pagerank algorithm, alpha = 0.85 , score: 0.0297368421053
+Iterative best removal with k = 2 score: 0.0493074792244
+Removed rankers (in order): ranker21, ranker29
+Iterative best flip, score: 0.0808864265928
+Final score: 0.0808864265928
+Final ranker:
+19 4 17 3 12 6 15 11 1 7 5 14 10 18 13 8 20 2 16 9
