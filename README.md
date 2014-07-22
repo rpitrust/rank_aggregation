@@ -70,6 +70,8 @@ Iterative algorithms (executed in the order given):
     * igf: iterative greedy flip
     * ibf k: iterative best flip (at most k (integer, default 1) rounds
     * ir k: iterative remove up to k (integer, default 1) rankers
+    
+All parameters with default values must be explicitly provided when combined with other functions. 
 
 Example: python aggregate.py pg 0.85 ibf
 	Pagerank, followed by ibf
